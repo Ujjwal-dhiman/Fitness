@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Fitness Coach</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to Your AI Fitness Coach 💪</h1>
+            <p>Your journey to a stronger, healthier you starts here!</p>
+        </header>
+
+        <main>
+            <section id="goal-form">
+                <h2>Build Your Personalized Fitness Plan</h2>
+
+                <label for="age">Age:</label>
+                <input type="number" id="age" placeholder="Enter your age" required>
+
+                <label for="weight">Weight (kg):</label>
+                <input type="number" id="weight" placeholder="Enter your weight" required>
+
+                <label for="height">Height (cm):</label>
+                <input type="number" id="height" placeholder="Enter your height" required>
+
+                <label for="goal">Fitness Goal:</label>
+                <select id="goal">
+                    <option value="lose">Lose Weight</option>
+                    <option value="gain">Gain Muscle</option>
+                    <option value="maintain">Maintain Fitness</option>
+                </select>
+
+                <button onclick="startLoading()">Generate Plan</button>
+            </section>
+
+            <!-- Loading animation -->
+            <div id="loading" class="hidden">
+                <p>Generating your personalized plan... ⏳</p>
+            </div>
+
+            <!-- Results -->
+            <section id="result" class="hidden">
+                <h2>Your Personalized Fitness Plan 🏋️</h2>
+                <div id="bmi-result"></div>
+                <div id="macro-result"></div>
+                <div id="workout-plan"></div>
+                <p class="quote">"The only bad workout is the one you didn't do."</p>
+            </section>
+        </main>
+
+        <footer>
+            <p>🌟 Powered by AI | Your Virtual Trainer</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
